@@ -1,0 +1,457 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body and Background */
+body {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+    color: #ffffff;
+    background-color: #424040;
+    overflow-x: hidden;
+}
+
+/* Container */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Header */
+header {
+    width: 100%;
+    padding: 1.5rem 0;
+    background-color: transparent;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Add shadow for better separation */
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px; /* Padding to prevent overflow */
+}
+
+.logo {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #ffffff;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+}
+
+.nav-links a {
+    text-decoration: none;
+    font-weight: 400;
+    font-size: 1rem;
+    color: #cfcfcf;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+    color: #00ff88;
+}
+
+/* Hero Section */
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100vh;
+    padding-top: 100px; /* Adjusted to account for fixed navbar height */
+    background: linear-gradient(to right, #2c3e50, #34495e);
+    box-sizing: border-box; /* Prevent text from overflowing */
+}
+
+.hero-text {
+    max-width: 50%;
+    padding-left: 20px;
+    padding-right: 20px;
+    color: #fff;
+    box-sizing: border-box; /* Ensure padding does not overflow */
+}
+
+.hero-text h2 {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    color: #fff;
+}
+
+.hero-text p {
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+    color: #cfcfcf;
+}
+
+.hero-text .highlight {
+    color: #00ff88;
+    font-weight: 700;
+}
+
+.hero-text .btn {
+    display: inline-block;
+    padding: 0.8rem 1.5rem;
+    background-color: #00ff88;
+    color: #121212;
+    font-weight: 700;
+    border: none;
+    border-radius: 25px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.hero-text .btn:hover {
+    background-color: #00d97e;
+}
+
+.social-icons {
+    display: flex;
+    align-items: center;
+    margin-top: 15px;
+}
+
+.social-icons .link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-size: 18px;
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    margin: 0 8px;
+    transition: transform 0.3s ease;
+}
+
+.social-icons .link:hover {
+    transform: scale(1.1);
+}
+
+.social-icons .link i {
+    font-size: 1.5rem;
+}
+
+/* Hero Image */
+.hero-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    padding: auto;
+}
+
+.profile-circle {
+    width: 500px;
+    height: 80vh;
+    border-radius: 100%;
+    overflow: hidden;
+    box-shadow: 0 0 50px #077b32;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.profile-circle img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none; /* Hide the navigation links by default on small screens */
+    }
+
+    nav {
+        justify-content: center; /* Center the navigation */
+    }
+
+    .hero {
+        flex-direction: column;
+        align-items: center; /* Stack the content vertically */
+        text-align: center; /* Center align the text */
+    }
+
+    .hero-text {
+        max-width: 100%;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    .hero-image {
+        margin-top: 20px;
+    }
+
+    /* Optional: Add a mobile-friendly hamburger menu here if needed */
+}
+
+
+
+/* About Section */
+.about-section {
+    padding: 6rem 0;
+    color: #cfcfcf;
+    background-color: #1e1e1e;
+    text-align: center;
+}
+
+.about-section h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #ffffff;
+    margin-bottom: 2rem;
+}
+
+.about-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start; /* Align text to the top of the image */
+    gap: 2rem;
+    margin-top: 1.5rem;
+    text-align: left; /* Align text to the left for better readability */
+}
+
+.about-text {
+    flex: 1 1 50%;
+    max-width: 600px;
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #dcdcdc;
+    text-align: justify; /* Justify the text for a clean alignment */
+    margin: 0 auto; /* Center the text block on smaller screens */
+}
+
+.about-text p {
+    margin-bottom: 1.5rem;
+}
+
+.about-image {
+    flex: 1 1 40%;
+    text-align: center;
+}
+
+.about-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 15px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.5);
+}
+
+
+/* Skills Section */
+.skills-section {
+    padding: 6rem 0;
+    text-align: center;
+    color: #cfcfcf;
+}
+
+.skills-section h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #ffffff;
+    margin-bottom: 1rem;
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.skill-item {
+    background-color: #1e1e1e;
+    padding: 1.5rem;
+    border-radius: 8px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.skill-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0px 4px 20px rgba(0, 255, 136, 0.4);
+}
+
+.skill-icon {
+    font-size: 3rem;
+    color: #00ff88;
+    margin-bottom: 1rem;
+}
+
+.skill-item h3 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #ffffff;
+    margin-bottom: 0.5rem;
+}
+
+.skill-item p {
+    font-size: 1rem;
+    color: #cfcfcf;
+    line-height: 1.6;
+}
+
+/* Portfolio Section */
+.portfolio {
+    padding: 6rem 0;
+    text-align: center;
+}
+
+.portfolio h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #ffffff;
+    margin-bottom: 1rem;
+}
+
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.project-card {
+    background-color: #1e1e1e;
+    border-radius: 8px;
+    overflow: hidden;
+    text-align: left;
+}
+
+.project-card img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.project-card h3 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin: 1rem;
+    color: #ffffff;
+}
+
+.project-card p {
+    font-size: 1rem;
+    margin: 0 1rem 1rem 1rem;
+    color: #cfcfcf;
+}
+
+/* Contact Section Enhancements */
+.contact {
+    padding: 6rem 0;
+    text-align: center;
+    color: #cfcfcf;
+}
+
+.contact h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #ffffff;
+    margin-bottom: 1rem;
+}
+
+.contact p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    color: #cfcfcf;
+}
+
+.contact form {
+    max-width: 600px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    padding: 2rem;
+    background-color: #1e1e1e;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+}
+
+.contact .form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    text-align: left;
+}
+
+.contact input,
+.contact textarea {
+    padding: 0.8rem;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    background-color: #333;
+    color: #ffffff;
+    outline: none;
+}
+
+.contact input:focus,
+.contact textarea:focus {
+    border: 2px solid #00ff88;
+    background-color: #424040;
+}
+
+.contact button {
+    padding: 0.8rem;
+    background-color: #00ff88;
+    color: #121212;
+    font-weight: 700;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.contact button:hover {
+    background-color: #00d97e;
+}
+
+/* Social Icons in Contact Section */
+.social-icons {
+    margin-top: 2rem;
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+}
+
+.social-icons .link {
+    color: #ffffff;
+    font-size: 1.5rem;
+    text-decoration: none;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.social-icons .link:hover {
+    color: #00ff88;
+    transform: scale(1.2);
+}
+
+
+/* Footer (optional) */
+footer {
+    text-align: center;
+    padding: 1.5rem;
+    background-color: #1e1e1e;
+    color: #cfcfcf;
+    font-size: 0.9rem;
+}
